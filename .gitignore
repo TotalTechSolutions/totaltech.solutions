@@ -5,3 +5,4 @@ public/css
 public/js
 
 public/appointments/config.php
+public/appointments/application/logs/*.php
