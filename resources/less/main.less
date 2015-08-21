@@ -16,7 +16,7 @@
 */
 
 @brand-dark:  #272727;
-@brand-light: #f6f6f6;
+@brand-light: #fafafa;
 @brand-color: #f1545d;
 
 /*
@@ -32,6 +32,7 @@ body {
     margin: 0;
     padding: 0;
     color: @brand-dark;
+    background-color: @brand-light;
 }
 
 * {
@@ -65,6 +66,7 @@ header {
     width: 100%;
     position: fixed;
     top: 0;
+    border-bottom: 2px solid @brand-color;
 
     nav {
         &.navbar.navbar-default {
@@ -124,7 +126,6 @@ header {
     background-image: url(../img/tech.jpg);
     display: table;
     text-align: center;
-    border-bottom: 2px solid @brand-color;
 
     @media(max-width: @screen-sm) {
         height: 450px;
