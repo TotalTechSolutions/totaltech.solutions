@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
 
 npm install
-gulp
+node_modules/.bin/gulp
