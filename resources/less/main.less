@@ -11,6 +11,16 @@
 
 /*
 |--------------------------------------------------------------------------
+| Variables
+|--------------------------------------------------------------------------
+*/
+
+@brand-dark:  #272727;
+@brand-light: #f6f6f6;
+@brand-color: #f1545d;
+
+/*
+|--------------------------------------------------------------------------
 | Basic Stuff
 |--------------------------------------------------------------------------
 */
@@ -28,9 +38,22 @@ body {
     font-family: 'Arvo', serif;
 }
 
-@brand-dark:  #272727;
-@brand-light: #f6f6f6;
-@brand-color: #f1545d;
+a {
+    color: @brand-color;
+
+    &:hover {
+        color: darken(@brand-color, 5%);
+    }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+}
 
 /*
 |--------------------------------------------------------------------------
@@ -103,6 +126,14 @@ header {
     text-align: center;
     border-bottom: 2px solid @brand-color;
 
+    @media(max-width: @screen-sm) {
+        height: 450px;
+    }
+
+    @media(max-width: @screen-xs) {
+        height: 350px;
+    }
+
     .cover {
         display: table-cell;
         vertical-align: middle;
@@ -111,6 +142,127 @@ header {
 
         h1 {
             color: @brand-light;
+            font-size: 40px;
+
+            @media(max-width: @screen-md) {
+                font-size: 32px;
+            }
+
+            @media(max-width: @screen-sm) {
+                font-size: 28px;
+            }
+
+            @media(max-width: @screen-xs) {
+                font-size: 22px;
+            }
+        }
+    }
+}
+
+/*
+|--------------------------------------------------------------------------
+| Scheduling
+|--------------------------------------------------------------------------
+*/
+
+.scheduling {
+    padding: 100px 0;
+}
+
+/*
+|--------------------------------------------------------------------------
+| Quote
+|--------------------------------------------------------------------------
+*/
+
+.quote {
+    background-image: url(../img/quote.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    height: 500px;
+    width: 100%;
+
+    @media(max-width: @screen-sm) {
+        height: 200px;
+        background-attachment: scroll;
+    }
+
+    .cover {
+        background-color: fade(@brand-dark, 60%);
+        height: 100%;
+        width: 100%;
+        display: table;
+
+        h3 {
+            margin: 0;
+            display: table-cell;
+            height: 100%;
+            width: 100%;
+            vertical-align: middle;
+            text-align: center;
+            color: @brand-light;
+            font-size: 32px;
+
+            @media(max-width: @screen-md) {
+                font-size: 26px;
+            }
+
+            @media(max-width: @screen-sm) {
+                font-size: 18px;
+            }
+        }
+    }
+}
+
+/*
+|--------------------------------------------------------------------------
+| Contact
+|--------------------------------------------------------------------------
+*/
+
+.contact {
+    padding: 50px 0;
+
+    h1 {
+        margin-bottom: 15px;
+    }
+}
+
+/*
+|--------------------------------------------------------------------------
+| Footer
+|--------------------------------------------------------------------------
+*/
+
+.footer {
+    background-color: @brand-dark;
+    color: fade(@brand-light, 70%);
+    padding: 15px 0;
+    font-weight: 300;
+
+    a {
+        color: fade(@brand-light, 70%);
+
+        &:hover,
+        &:focus {
+            color: @brand-light;
+        }
+    }
+
+    @media(max-width: @screen-sm) {
+        .col-xs-12 {
+            text-align: center;
+
+            .pull-right {
+                float: none !important;
+                margin-bottom: 10px;
+            }
+
+            .text-right {
+                text-align: center;
+            }
         }
     }
 }
