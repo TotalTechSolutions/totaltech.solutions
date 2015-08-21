@@ -8,7 +8,12 @@ var gulp   = require('gulp');
 var less   = require('gulp-less');
 var concat = require('gulp-concat');
 var minify = require('gulp-minify-css');
-var uglify = require('gulp-uglifyjs');
+var uglify = require('gulp-uglify');
+
+var LessPluginCleanCSS = require('less-plugin-clean-css'),
+    LessPluginAutoPrefix = require('less-plugin-autoprefix'),
+    cleancss = new LessPluginCleanCSS({ advanced: true }),
+    autoprefix= new LessPluginAutoPrefix({ browsers: ["last 2 versions"] });
 
 /*
 |--------------------------------------------------------------------------
@@ -18,9 +23,10 @@ var uglify = require('gulp-uglifyjs');
 
 gulp.task('less', function() {
     return gulp.src('resources/less/main.less')
-        .pipe(less())
+        .pipe(less({
+            plugins: [autoprefix, cleancss]
+        }))
         .pipe(concat('styles.css'))
-        .pipe(minify())
         .pipe(gulp.dest('public/css/'));
 });
 
