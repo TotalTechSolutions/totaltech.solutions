@@ -1,4 +1,15 @@
 {
+  "name": "totaltech.solutions",
+  "description": "Total Tech Solutions",
+  "version": "1.0.0",
+  "homepage": "https://github.com/TotalTechSolutions/totaltech.solutions#README",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TotalTechSolutions/totaltech.solutions.git"
+  },
+  "bugs": {
+    "url": "https://github.com/TotalTechSolutions/totaltech.solutions/issues"
+  },
   "dependencies": {
     "bootstrap": "^3.3.5",
     "gulp": "^3.9.0",
