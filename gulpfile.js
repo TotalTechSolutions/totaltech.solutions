@@ -7,7 +7,6 @@
 var gulp   = require('gulp');
 var less   = require('gulp-less');
 var concat = require('gulp-concat');
-var minify = require('gulp-minify-css');
 var uglify = require('gulp-uglify');
 
 var LessPluginCleanCSS = require('less-plugin-clean-css'),
